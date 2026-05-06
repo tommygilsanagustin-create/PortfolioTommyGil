@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio interactivo de Tommy Gil San Agustin, Unity Game Developer especializado en Unity y C#."
+    />
+    <title>Tommy Gil | Unity Game Developer</title>
+    <link rel="stylesheet" href="./src/styles.css?v=20260506" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="hud" aria-label="Menu principal">
+      <a class="hud__brand" href="#home" aria-label="Volver al inicio">
+        <span class="hud__avatar-mini" aria-hidden="true"></span>
+        <span>Tommy Gil</span>
+      </a>
+      <nav class="hud__nav" aria-label="Secciones del portfolio">
+        <a href="#about" data-nav="about">Sobre mi</a>
+        <a href="#skills" data-nav="skills">Skills</a>
+        <a href="#projects" data-nav="projects">Proyectos</a>
+        <a href="#contact" data-nav="contact">Contacto</a>
+      </nav>
+      <div class="hud__progress" aria-label="Progreso del portfolio">
+        <span class="hud__progress-label">LVL <strong id="levelCounter">0</strong></span>
+        <span class="hud__bar"><span id="progressBar"></span></span>
+      </div>
+    </header>
+
+    <div class="player" aria-hidden="true">
+      <span class="player__shadow"></span>
+      <span class="player__sprite">
+        <span class="player__head"></span>
+        <span class="player__body"></span>
+        <span class="player__arm player__arm--left"></span>
+        <span class="player__arm player__arm--right"></span>
+        <span class="player__leg player__leg--left"></span>
+        <span class="player__leg player__leg--right"></span>
+      </span>
+    </div>
+
+    <main class="world" id="world" tabindex="-1">
+      <section class="level level--home" id="home" data-level="0" aria-labelledby="homeTitle">
+        <div class="parallax parallax--stars" aria-hidden="true"></div>
+        <div class="parallax parallax--city" aria-hidden="true"></div>
+        <div class="level__content hero">
+          <p class="level-tag">Nuevo perfil desbloqueado</p>
+          <h1 id="homeTitle">Tommy Gil</h1>
+          <p class="hero__subtitle">Unity Game Developer</p>
+          <div class="hero__actions">
+            <a class="arcade-button" href="#about" data-start>Start Game</a>
+            <a class="ghost-button" href="https://github.com/tommygilsanagustin-create" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+          </div>
+          <div class="hero__stats" aria-label="Resumen rapido">
+            <span><strong>Main</strong> Unity</span>
+            <span><strong>Stack</strong> C#</span>
+            <span><strong>Quest</strong> Unreal Engine</span>
+          </div>
+        </div>
+        <div class="ground ground--home" aria-hidden="true"></div>
+      </section>
+
+      <section class="level level--about" id="about" data-level="1" aria-labelledby="aboutTitle">
+        <div class="parallax parallax--hills" aria-hidden="true"></div>
+        <div class="level__content split">
+          <div class="dialogue-box">
+            <p class="level-tag">Nivel 1: Sobre mi</p>
+            <h2 id="aboutTitle">Desarrollador de videojuegos en progreso constante</h2>
+            <p>
+              Soy Tommy Gil San Agustin, desarrollador de videojuegos con foco en Unity y C#.
+              Me gusta crear proyectos propios, mejorar la logica de juego y aprender mientras construyo.
+            </p>
+            <p>
+              Ahora mismo estoy creando videojuegos en Unity y ampliando mis skills con Unreal Engine.
+              Tambien tengo una habilidad poco sospechosa en informatica: soy bastante extrovertido y me gusta comunicar ideas.
+            </p>
+          </div>
+          <aside class="quest-card" aria-label="Estado actual">
+            <span class="quest-card__icon" aria-hidden="true">T</span>
+            <h3>Quest activa</h3>
+            <p>Crear experiencias jugables con codigo limpio, buena comunicacion y muchas ganas de subir de nivel.</p>
+            <div class="mini-meter" aria-label="Energia creativa">
+              <span style="--meter: 88%"></span>
+            </div>
+          </aside>
+        </div>
+        <div class="ground ground--grass" aria-hidden="true"></div>
+      </section>
+
+      <section class="level level--skills" id="skills" data-level="2" aria-labelledby="skillsTitle">
+        <div class="parallax parallax--grid" aria-hidden="true"></div>
+        <div class="level__content">
+          <p class="level-tag">Nivel 2: Power-ups</p>
+          <h2 id="skillsTitle">Skills de gameplay y programacion</h2>
+          <div class="skill-grid" aria-label="Habilidades">
+            <article class="skill-card skill-card--gold">
+              <span class="skill-card__icon">U</span>
+              <h3>Unity</h3>
+              <p>Motor principal para prototipos, escenas, interaccion y gameplay.</p>
+            </article>
+            <article class="skill-card skill-card--cyan">
+              <span class="skill-card__icon">C#</span>
+              <h3>C#</h3>
+              <p>Programacion de sistemas, logica de juego y comportamiento.</p>
+            </article>
+            <article class="skill-card skill-card--red">
+              <span class="skill-card__icon">UE</span>
+              <h3>Unreal Engine</h3>
+              <p>En progreso, sumando herramientas para nuevos tipos de proyectos.</p>
+            </article>
+            <article class="skill-card skill-card--lime">
+              <span class="skill-card__icon">DB</span>
+              <h3>Debugging</h3>
+              <p>Buscar errores con paciencia, metodo y cabeza fria.</p>
+            </article>
+            <article class="skill-card skill-card--violet">
+              <span class="skill-card__icon">OP</span>
+              <h3>Optimizacion</h3>
+              <p>Mejorar rendimiento, limpiar cuellos de botella y cuidar recursos.</p>
+            </article>
+            <article class="skill-card skill-card--blue">
+              <span class="skill-card__icon">GL</span>
+              <h3>Game logic</h3>
+              <p>Reglas, feedback, estados y sistemas que hacen que jugar tenga sentido.</p>
+            </article>
+            <article class="skill-card skill-card--pink">
+              <span class="skill-card__icon">PG</span>
+              <h3>Programacion general</h3>
+              <p>Base tecnica para adaptarme a herramientas, lenguajes y problemas.</p>
+            </article>
+          </div>
+        </div>
+        <div class="ground ground--tiles" aria-hidden="true"></div>
+      </section>
+
+      <section class="level level--projects" id="projects" data-level="3" aria-labelledby="projectsTitle">
+        <div class="parallax parallax--orbit" aria-hidden="true"></div>
+        <div class="level__content projects-content">
+          <p class="level-tag">Nivel 3: Misiones desbloqueadas</p>
+          <h2 id="projectsTitle">Proyectos publicos</h2>
+          <div class="project-grid" aria-label="Listado de proyectos">
+            <article class="project-card project-card--web">
+              <div class="project-card__screen" aria-hidden="true">
+                <span class="screen-mock screen-mock--web"></span>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__kicker">Mundo web</span>
+                <h3>Web_Admira_Next</h3>
+                <p>Repositorio publico con README minimo. Presentado como proyecto web sin mostrar codigo ni capturas tecnicas.</p>
+                <div class="tech-row">
+                  <span>Tecnologia no especificada publicamente</span>
+                </div>
+                <a href="https://github.com/tommygilsanagustin-create/Web_Admira_Next" target="_blank" rel="noreferrer">Ver en GitHub</a>
+              </div>
+            </article>
+
+            <article class="project-card project-card--unity">
+              <div class="project-card__screen" aria-hidden="true">
+                <span class="screen-mock screen-mock--unity"></span>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__kicker">Nivel Unity</span>
+                <h3>ProyectoJEC</h3>
+                <p>Proyecto publico con tecnologias detectadas de entorno Unity, orientado a prototipado visual y logica jugable.</p>
+                <div class="tech-row">
+                  <span>ShaderLab</span>
+                  <span>C#</span>
+                  <span>HLSL</span>
+                </div>
+                <a href="https://github.com/tommygilsanagustin-create/ProyectoJEC" target="_blank" rel="noreferrer">Ver en GitHub</a>
+              </div>
+            </article>
+
+            <article class="project-card project-card--robot">
+              <div class="project-card__screen" aria-hidden="true">
+                <span class="screen-mock screen-mock--robot"></span>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__kicker">Mision robotica</span>
+                <h3>RobotBa</h3>
+                <p>Repositorio publico asociado al ecosistema Bits&amp;Atoms. La tecnologia principal detectada es Python.</p>
+                <div class="tech-row">
+                  <span>Python</span>
+                </div>
+                <a href="https://github.com/BitsAtoms/RobotBa" target="_blank" rel="noreferrer">Ver en GitHub</a>
+              </div>
+            </article>
+
+            <article class="project-card project-card--alpha">
+              <div class="project-card__screen" aria-hidden="true">
+                <span class="screen-mock screen-mock--alpha"></span>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__kicker">Alpha build</span>
+                <h3>Alpha5Unity</h3>
+                <p>Proyecto publico con base Unity y shaders. Buen escaparate de integracion visual y trabajo tecnico en motor.</p>
+                <div class="tech-row">
+                  <span>ShaderLab</span>
+                  <span>C#</span>
+                  <span>HLSL</span>
+                </div>
+                <a href="https://github.com/BitsAtoms/Alpha5Unity" target="_blank" rel="noreferrer">Ver en GitHub</a>
+              </div>
+            </article>
+
+            <article class="project-card project-card--android">
+              <div class="project-card__screen" aria-hidden="true">
+                <span class="screen-mock screen-mock--android"></span>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__kicker">Build Android</span>
+                <h3>AndroidAlpha5</h3>
+                <p>Repositorio publico multiplataforma con componentes nativos y trazas de entorno Unity para Android.</p>
+                <div class="tech-row">
+                  <span>C++</span>
+                  <span>C</span>
+                  <span>C#</span>
+                  <span>ShaderLab</span>
+                </div>
+                <a href="https://github.com/BitsAtoms/AndroidAlpha5" target="_blank" rel="noreferrer">Ver en GitHub</a>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="ground ground--metal" aria-hidden="true"></div>
+      </section>
+
+      <section class="level level--contact" id="contact" data-level="4" aria-labelledby="contactTitle">
+        <div class="parallax parallax--portal" aria-hidden="true"></div>
+        <div class="level__content contact-zone">
+          <p class="level-tag">Nivel 4: Portal final</p>
+          <h2 id="contactTitle">¿Creamos algo juntos?</h2>
+          <p>
+            Si buscas a alguien con ganas de construir, comunicar y aprender dentro de un equipo de videojuegos,
+            este portal esta abierto.
+          </p>
+          <div class="contact-actions" aria-label="Canales de contacto">
+            <a class="contact-button contact-button--linkedin" href="https://www.linkedin.com/in/tommy-gil-san-agust%C3%ADn/" target="_blank" rel="noreferrer">
+              <span>in</span>
+              LinkedIn
+            </a>
+            <a class="contact-button contact-button--email" href="mailto:tommygilsanagustin@gmail.com">
+              <span>@</span>
+              Email
+            </a>
+            <a class="contact-button contact-button--github" href="https://github.com/tommygilsanagustin-create" target="_blank" rel="noreferrer">
+              <span>GH</span>
+              GitHub
+            </a>
+          </div>
+        </div>
+        <div class="ground ground--portal" aria-hidden="true"></div>
+      </section>
+    </main>
+
+    <script defer src="./src/main.js?v=20260506"></script>
+  </body>
+</html>

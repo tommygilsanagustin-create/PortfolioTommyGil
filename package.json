@@ -1,0 +1,10 @@
+{
+  "name": "tommy-gil-game-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio interactivo tipo videojuego para Tommy Gil San Agustin.",
+  "scripts": {
+    "start": "python -m http.server 5173",
+    "dev": "python -m http.server 5173"
+  }
+}
